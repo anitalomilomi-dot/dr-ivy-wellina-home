@@ -19,10 +19,12 @@ test("server-renders the Dr. Ivy homepage", async () => {
   assert.match(response.headers.get("content-type") ?? "", /^text\/html\b/i);
 
   const html = await response.text();
-  assert.match(html, /Dr\. Ivy｜WELLINA 芳香教育與專業培訓/);
-  assert.match(html, /讓香氣，成為一種/);
-  assert.match(html, /課程與認證/);
-  assert.match(html, /學習資源/);
-  assert.match(html, /企業合作/);
+  assert.match(html, /黃敏菁博士 Dr\. Ivy｜WELLINA 芳香教育與調香課程/);
+  assert.match(html, /讓香氣成為一門/);
+  assert.match(html, /課程學習/);
+  assert.match(html, /影音花絮/);
+  assert.match(html, /知識資源/);
+  assert.match(html, /合作服務/);
+  assert.doesNotMatch(html, /治療/);
   assert.doesNotMatch(html, /codex-preview|Your site is taking shape|react-loading-skeleton/i);
 });
