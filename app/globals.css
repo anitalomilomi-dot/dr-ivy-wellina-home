@@ -105,10 +105,10 @@ em { font-style: normal; }
 }
 .hero-copy-panel {
   position: relative;
-  padding: 190px clamp(54px, 7vw, 132px) 76px clamp(36px, 8vw, 150px);
+  padding: 210px clamp(54px, 7vw, 132px) 76px clamp(36px, 8vw, 150px);
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   background:
     radial-gradient(circle at 14% 20%, rgba(255, 255, 255, 0.72), transparent 28%),
     linear-gradient(140deg, var(--mist-light) 0%, var(--mist) 72%);
@@ -147,10 +147,10 @@ em { font-style: normal; }
   max-width: 700px;
   color: var(--deep);
   font-family: var(--serif);
-  font-size: clamp(46px, 4.3vw, 68px);
+  font-size: clamp(43px, 3.7vw, 60px);
   font-weight: 400;
   line-height: 1.42;
-  letter-spacing: 0.035em;
+  letter-spacing: 0.025em;
 }
 .hero h1 em { display: block; color: var(--sage); white-space: nowrap; }
 .hero-lead {
