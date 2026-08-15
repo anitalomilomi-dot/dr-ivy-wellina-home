@@ -1,4 +1,5 @@
 import { cp, mkdir, readFile, rm, writeFile } from "node:fs/promises";
+import { createHash } from "node:crypto";
 import path from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
 
@@ -20,6 +21,12 @@ if (!response.ok) {
 
 let html = await response.text();
 
+const sourceCss = await readFile(path.join(projectRoot, "app/globals.css"), "utf8");
+const portableCss = sourceCss
+  .replace(/^@import\s+["']tailwindcss["'];?\s*/m, "")
+  .replace(/url\((["'])\/images\//g, "url($1./images/");
+const styleVersion = createHash("sha256").update(portableCss).digest("hex").slice(0, 10);
+
 // GitHub Pages and future hosts receive a plain, dependency-free document.
 // The homepage currently has no JavaScript-only interactions, so native HTML
 // behavior remains intact after Vinext runtime scripts are removed.
@@ -32,13 +39,8 @@ html = html
   .replace(/src=["']\/([^"']*)["']/g, 'src="./$1"')
   .replace(
     "</head>",
-    '<link rel="icon" href="./favicon.svg"/><link rel="stylesheet" href="./style.css"/></head>',
+    `<link rel="icon" href="./favicon.svg"/><link rel="stylesheet" href="./style.css?v=${styleVersion}"/></head>`,
   );
-
-const sourceCss = await readFile(path.join(projectRoot, "app/globals.css"), "utf8");
-const portableCss = sourceCss
-  .replace(/^@import\s+["']tailwindcss["'];?\s*/m, "")
-  .replace(/url\((["'])\/images\//g, "url($1./images/");
 
 await rm(outputDir, { recursive: true, force: true });
 await mkdir(outputDir, { recursive: true });

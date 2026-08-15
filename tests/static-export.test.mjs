@@ -10,7 +10,7 @@ test("exports a host-neutral GitHub Pages homepage", async () => {
   const css = await readFile(`${projectRoot}/docs/style.css`, "utf8");
 
   assert.match(html, /讓香氣成為一門/);
-  assert.match(html, /href="\.\/style\.css"/);
+  assert.match(html, /href="\.\/style\.css\?v=[a-f0-9]{10}"/);
   assert.match(html, /src="\.\/images\/wellina-ig-ivy\.jpg"/);
   assert.doesNotMatch(html, /\/_next\/|<script\b/i);
   assert.doesNotMatch(html, /(?:src|href)="\//);
