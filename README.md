@@ -1,6 +1,6 @@
-# Dr. Ivy · WELLINA 官方網站
+# Dr. IVY · WELLINA 官方網站
 
-Dr. Ivy／WELLINA 芳香教育與專業培訓網站的首頁原型與可攜式發佈版本。
+Dr. IVY／WELLINA 芳香教育與專業培訓網站的首頁原型與可攜式發佈版本。
 
 ## 目前架構
 

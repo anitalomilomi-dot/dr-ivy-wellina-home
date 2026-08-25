@@ -1,0 +1,73 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://wellina.example/schemas/scent-order-record.v1.json",
+  "title": "WELLINA scent quiz order record",
+  "type": "object",
+  "required": ["productCode", "quizResponseId", "profileId", "status", "customer", "sender", "recipient", "payment", "recommendations", "consents", "createdAt"],
+  "properties": {
+    "productCode": {"type": "string", "pattern": "^WSP-[0-9]{6}-[0-9]{4,}$"},
+    "quizResponseId": {"type": "string", "minLength": 1},
+    "profileId": {"type": "string", "pattern": "^S(0[1-9]|1[0-5])$"},
+    "formulaId": {"type": ["string", "null"], "pattern": "^S(0[1-9]|1[0-5])-[AB]$"},
+    "formulaVersion": {"type": ["string", "null"]},
+    "cardId": {"type": ["string", "null"]},
+    "status": {"enum": ["quiz_completed", "awaiting_payment", "payment_review", "paid", "formula_assigned", "ivy_reviewed", "in_production", "quality_check", "shipped", "delivered", "reorder_available", "cancelled"]},
+    "customer": {
+      "type": "object",
+      "required": ["name", "phone"],
+      "properties": {"name": {"type": "string"}, "phone": {"type": "string"}, "email": {"type": ["string", "null"], "format": "email"}},
+      "additionalProperties": false
+    },
+    "sender": {
+      "type": "object",
+      "required": ["name", "phone"],
+      "properties": {"name": {"type": "string"}, "phone": {"type": "string"}, "giftMessage": {"type": ["string", "null"], "maxLength": 200}},
+      "additionalProperties": false
+    },
+    "recipient": {
+      "type": "object",
+      "required": ["name", "phone", "postalCode", "city", "district", "addressLine"],
+      "properties": {"name": {"type": "string"}, "phone": {"type": "string"}, "postalCode": {"type": "string"}, "city": {"type": "string"}, "district": {"type": "string"}, "addressLine": {"type": "string"}, "deliveryNote": {"type": ["string", "null"]}},
+      "additionalProperties": false
+    },
+    "payment": {
+      "type": "object",
+      "required": ["method", "amountTwd", "shippingTwd", "totalTwd", "status"],
+      "properties": {
+        "method": {"enum": ["bank_transfer", "ecpay"]},
+        "amountTwd": {"type": "integer", "minimum": 0},
+        "shippingTwd": {"type": "integer", "minimum": 0},
+        "discountTwd": {"type": "integer", "minimum": 0, "default": 0},
+        "totalTwd": {"type": "integer", "minimum": 0},
+        "status": {"enum": ["unpaid", "reported", "verified", "failed", "refunded"]},
+        "remitterName": {"type": ["string", "null"]},
+        "remitterAccountLast5": {"type": ["string", "null"], "pattern": "^[0-9]{5}$"},
+        "remittedAt": {"type": ["string", "null"], "format": "date-time"},
+        "paymentProofRef": {"type": ["string", "null"]},
+        "merchantTradeNo": {"type": ["string", "null"]}
+      },
+      "additionalProperties": false
+    },
+    "recommendations": {
+      "type": "object",
+      "required": ["consumerResult", "ivyBlendRecommendation", "productionRecommendation"],
+      "properties": {
+        "consumerResult": {"type": "object"},
+        "ivyBlendRecommendation": {"type": "object"},
+        "productionRecommendation": {"type": "object"}
+      }
+    },
+    "fulfillment": {
+      "type": "object",
+      "properties": {"batchId": {"type": ["string", "null"]}, "carrier": {"type": ["string", "null"]}, "trackingNumber": {"type": ["string", "null"]}, "shippedAt": {"type": ["string", "null"], "format": "date-time"}}
+    },
+    "consents": {
+      "type": "object",
+      "required": ["privacyVersion", "orderVersion", "agreedAt"],
+      "properties": {"privacyVersion": {"type": "string"}, "orderVersion": {"type": "string"}, "agreedAt": {"type": "string", "format": "date-time"}}
+    },
+    "createdAt": {"type": "string", "format": "date-time"},
+    "updatedAt": {"type": ["string", "null"], "format": "date-time"}
+  },
+  "additionalProperties": false
+}

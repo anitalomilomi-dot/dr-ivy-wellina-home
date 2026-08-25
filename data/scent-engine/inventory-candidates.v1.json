@@ -1,0 +1,39 @@
+{
+  "meta": {
+    "version": "0.1.0",
+    "updatedAt": "2026-08-23",
+    "visibility": "internal_only",
+    "purpose": "Ivy確認可納入15香調設計的新增原料候選庫",
+    "releaseRule": "identityStatus不是confirmed，或尚未取得供應商COA／SDS、批號、單價及最終用途安全審核者，不得進入可交付配方。"
+  },
+  "materials": [
+    {"id": "EO-ATL-CEDAR", "displayName": "大西洋雪松", "botanicalName": "Cedrus atlantica", "materialType": "essential_oil", "identityStatus": "confirmed", "formulaStatus": "candidate"},
+    {"id": "EO-HIM-CEDAR", "displayName": "喜馬拉雅雪松", "botanicalName": "Cedrus deodara", "materialType": "essential_oil", "identityStatus": "confirmed", "formulaStatus": "candidate"},
+    {"id": "EO-ROSEWOOD", "displayName": "花梨木", "botanicalName": "Aniba rosaeodora", "materialType": "essential_oil", "identityStatus": "supplier_document_required", "formulaStatus": "candidate_hold", "note": "須確認合法來源、批號與永續／貿易文件。"},
+    {"id": "EO-SANDALWOOD", "displayName": "檀木", "botanicalName": null, "materialType": "essential_oil", "identityStatus": "botanical_name_required", "formulaStatus": "candidate_hold", "note": "須確認是檀香Santalum album、澳洲檀香Santalum spicatum或其他品種。"},
+    {"id": "EO-HINOKI-PENDING", "displayName": "香柏", "botanicalName": null, "materialType": "essential_oil", "identityStatus": "botanical_name_required", "formulaStatus": "candidate_hold", "note": "中文商品名可能對應不同樹種，需以瓶身學名確認。"},
+    {"id": "EO-CYPRESS", "displayName": "絲柏", "botanicalName": "Cupressus sempervirens", "materialType": "essential_oil", "identityStatus": "confirmed", "formulaStatus": "candidate"},
+    {"id": "EO-FRANKINCENSE", "displayName": "乳香", "botanicalName": null, "materialType": "essential_oil", "identityStatus": "species_required", "formulaStatus": "candidate_hold", "note": "須確認Boswellia carterii、B. sacra或其他品種。"},
+    {"id": "EO-COPAIBA", "displayName": "古巴香脂", "botanicalName": "Copaifera spp.", "materialType": "essential_oil", "identityStatus": "supplier_species_required", "formulaStatus": "candidate_hold"},
+    {"id": "EO-SWEET-FENNEL", "displayName": "甜茴香", "botanicalName": "Foeniculum vulgare var. dulce", "materialType": "essential_oil", "identityStatus": "confirmed", "formulaStatus": "candidate_hold", "note": "進入配方前須依最終用途完成成分與限制檢查。"},
+    {"id": "EO-CINNAMON-LEAF", "displayName": "肉桂葉", "botanicalName": "Cinnamomum verum", "materialType": "essential_oil", "identityStatus": "plant_part_and_supplier_document_required", "formulaStatus": "candidate_hold"},
+    {"id": "EO-JUNIPER-BERRY", "displayName": "杜松子", "botanicalName": "Juniperus communis", "materialType": "essential_oil", "identityStatus": "confirmed", "formulaStatus": "candidate"},
+    {"id": "EO-RAVINTSARA", "displayName": "羅文莎葉", "botanicalName": "Cinnamomum camphora ct. 1,8-cineole", "materialType": "essential_oil", "identityStatus": "chemotype_document_required", "formulaStatus": "candidate_hold"},
+    {"id": "EO-RHODODENDRON-PENDING", "displayName": "染花杜鵑（語音待確認）", "botanicalName": null, "materialType": "essential_oil", "identityStatus": "label_photo_required", "formulaStatus": "candidate_hold", "note": "不得依語音名稱推定品種。"},
+    {"id": "EO-HELICHRYSUM-PENDING", "displayName": "茵陳／永久花（語音待確認）", "botanicalName": null, "materialType": "essential_oil", "identityStatus": "label_photo_required", "formulaStatus": "candidate_hold", "note": "須確認是一款永久花，或茵陳與永久花兩款不同原料。"},
+    {"id": "EO-EUC-RADIATA", "displayName": "澳洲尤加利", "botanicalName": "Eucalyptus radiata", "materialType": "essential_oil", "identityStatus": "supplier_label_required", "formulaStatus": "candidate_hold"},
+    {"id": "EO-EUC-GLOBULUS", "displayName": "藍膠尤加利", "botanicalName": "Eucalyptus globulus", "materialType": "essential_oil", "identityStatus": "confirmed", "formulaStatus": "candidate_hold"},
+    {"id": "EO-ROSEMARY-CINEOLE", "displayName": "桉油醇迷迭香", "botanicalName": "Salvia rosmarinus ct. 1,8-cineole", "materialType": "essential_oil", "identityStatus": "chemotype_document_required", "formulaStatus": "candidate_hold"},
+    {"id": "EO-ROSEMARY-VERBENONE", "displayName": "馬鞭草酮迷迭香", "botanicalName": "Salvia rosmarinus ct. verbenone", "materialType": "essential_oil", "identityStatus": "chemotype_document_required", "formulaStatus": "candidate_hold"},
+    {"id": "EO-NEROLI", "displayName": "橙花", "botanicalName": "Citrus aurantium var. amara", "materialType": "essential_oil", "identityStatus": "extraction_and_supplier_document_required", "formulaStatus": "candidate_hold"},
+    {"id": "AR-JASMINE", "displayName": "茉莉", "botanicalName": null, "materialType": "aromatic_extract", "identityStatus": "species_and_extraction_required", "formulaStatus": "candidate_hold", "note": "常見為原精而非精油；須確認Jasminum sambac或J. grandiflorum及萃取型態。"},
+    {"id": "EO-SPEARMINT", "displayName": "綠薄荷", "botanicalName": "Mentha spicata", "materialType": "essential_oil", "identityStatus": "confirmed", "formulaStatus": "candidate_hold"},
+    {"id": "EO-PEPPERMINT", "displayName": "歐薄荷", "botanicalName": "Mentha × piperita", "materialType": "essential_oil", "identityStatus": "supplier_label_required", "formulaStatus": "candidate_hold"},
+    {"id": "EO-GUAIACWOOD", "displayName": "癒創木", "botanicalName": "Bulnesia sarmientoi", "materialType": "essential_oil", "identityStatus": "supplier_document_required", "formulaStatus": "candidate_hold", "note": "須確認合法來源、批號與永續／貿易文件。"},
+    {"id": "EO-MANDARIN", "displayName": "橘子", "botanicalName": "Citrus reticulata", "materialType": "essential_oil", "identityStatus": "peel_method_required", "formulaStatus": "candidate_hold"},
+    {"id": "EO-LIME", "displayName": "萊姆", "botanicalName": "Citrus aurantiifolia", "materialType": "essential_oil", "identityStatus": "extraction_method_required", "formulaStatus": "candidate_hold", "note": "須區分冷壓或蒸餾規格。"},
+    {"id": "EO-TEA-TREE", "displayName": "茶樹", "botanicalName": "Melaleuca alternifolia", "materialType": "essential_oil", "identityStatus": "confirmed", "formulaStatus": "candidate_hold"},
+    {"id": "EO-NIAOULI", "displayName": "綠花白千層", "botanicalName": "Melaleuca quinquenervia", "materialType": "essential_oil", "identityStatus": "chemotype_document_required", "formulaStatus": "candidate_hold"},
+    {"id": "EO-YLANG", "displayName": "依蘭依蘭", "botanicalName": "Cananga odorata", "materialType": "essential_oil", "identityStatus": "grade_required", "formulaStatus": "candidate_hold", "note": "須確認Complete、Extra或其他分餾等級。"}
+  ]
+}

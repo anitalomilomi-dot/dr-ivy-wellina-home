@@ -1,0 +1,191 @@
+{
+  "meta": {
+    "version": "0.1.0",
+    "updatedAt": "2026-08-23",
+    "visibility": "internal_only",
+    "method": "Dr. IVY 滴定法",
+    "targetProduct": {
+      "volumeMl": 5,
+      "aromaticConcentrationPercent": 3,
+      "aromaticConcentrateMl": 0.15,
+      "baseToFinalVolumeMl": 4.85
+    },
+    "releaseRule": "配方必須完成 Ivy 試香、滴管校正、成本、安全、IFRA適用類別與實際用途確認後，才可進入消費者製作。"
+  },
+  "profiles": [
+    {
+      "id": "S01",
+      "name": "晨光柑橘調",
+      "family": "hesperidic",
+      "essentialOils": ["甜橙", "佛手柑FCF", "紅橘", "蒸餾檸檬", "葡萄柚", "山雞椒", "苦橙葉", "芳樟木"],
+      "molecules": ["D-檸檬烯", "乙酸芳樟酯"],
+      "formulaSlots": [{"id": "S01-A", "status": "palette_only"}, {"id": "S01-B", "status": "palette_only"}]
+    },
+    {
+      "id": "S02",
+      "name": "柑橘草本調",
+      "family": "hesperidic_aromatic",
+      "essentialOils": ["佛手柑FCF", "蒸餾檸檬", "葡萄柚", "苦橙葉", "迷迭香", "芳樟型羅勒", "真正薰衣草", "快樂鼠尾草"],
+      "molecules": ["芳樟醇", "二氫月桂烯醇"],
+      "formulaSlots": [{"id": "S02-A", "status": "palette_only"}, {"id": "S02-B", "status": "palette_only"}]
+    },
+    {
+      "id": "S03",
+      "name": "柔美花果調",
+      "family": "floral_fruity",
+      "essentialOils": ["紅橘", "甜橙", "佛手柑FCF", "天竺葵", "玫瑰草", "依蘭", "芳樟木", "真正薰衣草"],
+      "molecules": ["香葉醇", "乙酸苄酯"],
+      "formulaSlots": [{"id": "S03-A", "status": "palette_only"}, {"id": "S03-B", "status": "palette_only"}]
+    },
+    {
+      "id": "S04",
+      "name": "清新花香調",
+      "family": "floral_fresh",
+      "essentialOils": ["真正薰衣草", "天竺葵", "玫瑰草", "芳樟木", "苦橙葉", "佛手柑FCF", "快樂鼠尾草", "依蘭"],
+      "molecules": ["芳樟醇", "Hedione"],
+      "formulaSlots": [{"id": "S04-A", "status": "palette_only"}, {"id": "S04-B", "status": "palette_only"}]
+    },
+    {
+      "id": "S05",
+      "name": "柔暖花香調",
+      "family": "floral_warm",
+      "essentialOils": ["天竺葵", "玫瑰草", "依蘭", "真正薰衣草", "快樂鼠尾草", "甜橙", "芳樟木", "阿米香樹"],
+      "molecules": ["苯乙醇", "甲基紫羅蘭酮"],
+      "formulaSlots": [{"id": "S05-A", "status": "palette_only"}, {"id": "S05-B", "status": "palette_only"}]
+    },
+    {
+      "id": "S06",
+      "name": "優雅花木調",
+      "family": "floral_woody",
+      "essentialOils": ["天竺葵", "玫瑰草", "真正薰衣草", "芳樟木", "維吉尼亞雪松", "阿米香樹", "廣藿香", "佛手柑FCF"],
+      "molecules": ["Hedione", "Iso E Super"],
+      "formulaSlots": [{"id": "S06-A", "status": "palette_only"}, {"id": "S06-B", "status": "palette_only"}]
+    },
+    {
+      "id": "S07",
+      "name": "芳香草本調",
+      "family": "aromatic",
+      "essentialOils": ["真正薰衣草", "醒目薰衣草", "迷迭香", "快樂鼠尾草", "芳樟型羅勒", "甜馬鬱蘭", "胡椒薄荷", "蒸餾檸檬"],
+      "molecules": ["芳樟醇", "1,8-桉油醇"],
+      "formulaSlots": [{"id": "S07-A", "status": "palette_only"}, {"id": "S07-B", "status": "palette_only"}]
+    },
+    {
+      "id": "S08",
+      "name": "森林綠意調",
+      "family": "green_woody",
+      "essentialOils": ["絲柏", "杜松漿果", "歐洲赤松", "冷杉", "迷迭香", "苦橙葉", "廣藿香", "維吉尼亞雪松"],
+      "molecules": ["順式-3-己烯醇", "乙酸順式-3-己烯酯"],
+      "formulaSlots": [{"id": "S08-A", "status": "palette_only"}, {"id": "S08-B", "status": "palette_only"}]
+    },
+    {
+      "id": "S09",
+      "name": "靜謐木香調",
+      "family": "woody",
+      "essentialOils": ["維吉尼亞雪松", "阿特拉斯雪松", "絲柏", "阿米香樹", "岩蘭草", "廣藿香", "乳香", "芳樟木"],
+      "molecules": ["Iso E Super", "Cedramber"],
+      "formulaSlots": [{"id": "S09-A", "status": "internal_trial"}, {"id": "S09-B", "status": "palette_only"}]
+    },
+    {
+      "id": "S10",
+      "name": "辛香木質調",
+      "family": "woody_spicy",
+      "essentialOils": ["阿特拉斯雪松", "絲柏", "廣藿香", "岩蘭草", "黑胡椒", "豆蔻", "薑", "乳香"],
+      "molecules": ["Cashmeran", "Iso E Super"],
+      "formulaSlots": [{"id": "S10-A", "status": "palette_only"}, {"id": "S10-B", "status": "palette_only"}]
+    },
+    {
+      "id": "S11",
+      "name": "溫暖樹脂調",
+      "family": "amber_resinous",
+      "essentialOils": ["乳香", "沒藥", "欖香脂", "岩玫瑰", "古巴香脂", "廣藿香", "阿特拉斯雪松", "甜橙"],
+      "molecules": ["Ambroxan", "香蘭素"],
+      "formulaSlots": [{"id": "S11-A", "status": "palette_only"}, {"id": "S11-B", "status": "palette_only"}]
+    },
+    {
+      "id": "S12",
+      "name": "大地根系調",
+      "family": "earthy_rooty",
+      "essentialOils": ["岩蘭草", "廣藿香", "阿特拉斯雪松", "絲柏", "杜松漿果", "乳香", "胡蘿蔔籽", "薑"],
+      "molecules": ["Evernyl", "β-紫羅蘭酮"],
+      "formulaSlots": [{"id": "S12-A", "status": "palette_only"}, {"id": "S12-B", "status": "palette_only"}]
+    },
+    {
+      "id": "S13",
+      "name": "絲絨花香調",
+      "family": "floral_powdery",
+      "essentialOils": ["天竺葵", "玫瑰草", "依蘭", "芳樟木", "真正薰衣草", "快樂鼠尾草", "紅橘", "阿米香樹"],
+      "molecules": ["苯乙醇", "甲基紫羅蘭酮"],
+      "formulaSlots": [{"id": "S13-A", "status": "palette_only"}, {"id": "S13-B", "status": "palette_only"}]
+    },
+    {
+      "id": "S14",
+      "name": "芳香馥奇調",
+      "family": "fougere_aromatic",
+      "essentialOils": ["真正薰衣草", "醒目薰衣草", "天竺葵", "快樂鼠尾草", "佛手柑FCF", "廣藿香", "岩蘭草", "維吉尼亞雪松"],
+      "molecules": ["香豆素", "二氫月桂烯醇"],
+      "formulaSlots": [{"id": "S14-A", "status": "palette_only"}, {"id": "S14-B", "status": "palette_only"}]
+    },
+    {
+      "id": "S15",
+      "name": "花果柑苔調",
+      "family": "chypre_floral_fruity",
+      "essentialOils": ["佛手柑FCF", "紅橘", "天竺葵", "玫瑰草", "廣藿香", "岩蘭草", "岩玫瑰", "維吉尼亞雪松"],
+      "molecules": ["Evernyl", "β-紫羅蘭酮"],
+      "formulaSlots": [{"id": "S15-A", "status": "palette_only"}, {"id": "S15-B", "status": "palette_only"}]
+    }
+  ],
+  "formulas": [
+    {
+      "id": "S09-A",
+      "profileId": "S09",
+      "version": "0.2",
+      "status": "internal_trial_only",
+      "evaluationScope": "試香紙與內部嗅覺評估；不得直接交付消費者",
+      "olfactiveArchitecture": {
+        "intent": "明亮空氣進入安靜木質空間；木香溫潤、乾淨、有深度，但不呈現尖銳鉛筆感或厚重潮濕感。",
+        "opening": {"materials": ["絲柏", "乳香", "芳樟木"], "goal": "以清新微辛與透亮木香打開，不出現刺鼻樟腦感。"},
+        "heart": {"materials": ["芳樟木", "維吉尼亞雪松", "阿特拉斯雪松", "Iso E Super"], "goal": "建立柔和、通透、具有空氣感的木香主體。"},
+        "base": {"materials": ["阿米香樹", "岩蘭草", "廣藿香", "Cedramber"], "goal": "留下溫潤、安定、貼近的尾韻，不讓土味或煙燻感主導。"},
+        "transition": "前段的絲柏與乳香先散開，芳樟木銜接兩種雪松，最後由阿米香樹、少量根系氣息與木質單體延長尾韻。",
+        "avoid": ["尖銳鉛筆屑感", "潮濕泥土感", "厚重煙燻感", "樹脂黏甜感"]
+      },
+      "concentrateTotalParts": 100,
+      "materials": [
+        {"name": "芳樟木", "type": "essential_oil", "parts": 24},
+        {"name": "維吉尼亞雪松", "type": "essential_oil", "parts": 14},
+        {"name": "阿特拉斯雪松", "type": "essential_oil", "parts": 8},
+        {"name": "絲柏", "type": "essential_oil", "parts": 7},
+        {"name": "阿米香樹", "type": "essential_oil", "parts": 12},
+        {"name": "乳香", "type": "essential_oil", "parts": 8},
+        {"name": "岩蘭草", "type": "essential_oil", "parts": 3},
+        {"name": "廣藿香", "type": "essential_oil", "parts": 2},
+        {"name": "Iso E Super", "type": "aroma_molecule", "parts": 17},
+        {"name": "Cedramber", "type": "aroma_molecule", "parts": 5}
+      ],
+      "evaluationCheckpoints": [
+        {"time": "0–5分鐘", "check": "開場是否清新透亮，絲柏與乳香是否過尖。"},
+        {"time": "20–30分鐘", "check": "木香主體是否柔和連續，是否出現過強鉛筆屑感。"},
+        {"time": "2小時", "check": "尾韻是否溫潤安定，廣藿香與岩蘭草是否造成泥土感。"},
+        {"time": "24小時", "check": "試香紙殘香是否仍乾淨，Iso E Super與Cedramber是否壓過天然木香。"}
+      ],
+      "titration": {
+        "masterBlendDrops": 100,
+        "instruction": "各原料先使用相應且已校正的滴管，以parts作為研發滴數；黏稠原料與單體須另存實測滴數／mL。完成後靜置、依四個時間點試香，再由Ivy記錄修訂。"
+      },
+      "fiveMlAtThreePercent": {
+        "aromaticConcentrateMl": 0.15,
+        "baseToFinalVolumeMl": 4.85,
+        "estimatedDropsAtTwentyDropsPerMl": 3,
+        "productionHold": true
+      },
+      "requiredBeforeRelease": [
+        "Ivy完成試香與版本確認",
+        "確認噴霧實際用途與接觸部位",
+        "取得每項原料COA、SDS、批號與供應商單價",
+        "完成滴管校正、氧化與保存條件紀錄",
+        "依最終用途完成IFRA適用類別與限制檢查",
+        "完成基底相容性、穩定性、標示與成本檢查"
+      ]
+    }
+  ]
+}

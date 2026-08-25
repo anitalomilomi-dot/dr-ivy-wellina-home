@@ -1,0 +1,678 @@
+{
+  "version": "1.0.0",
+  "visibility": "consumer_and_internal_routing",
+  "questions": [
+    {
+      "stage": "01｜第一嗅覺反應",
+      "title": "如果面前有五張試香紙，你會先拿起哪一張？",
+      "help": "直接選第一個想聞的氣味，不需要猜自己的個性。",
+      "options": [
+        {
+          "label": "剛剝開的柑橘果皮",
+          "note": "微酸、明亮，帶真實果皮感",
+          "score": {
+            "citrus": 4,
+            "green": 1
+          }
+        },
+        {
+          "label": "帶露水的細緻花瓣",
+          "note": "柔和、有層次，但不甜膩",
+          "score": {
+            "floral": 4,
+            "citrus": 1
+          }
+        },
+        {
+          "label": "指尖揉開的新鮮葉片",
+          "note": "鮮綠、俐落，帶植物汁液感",
+          "score": {
+            "green": 4,
+            "woody": 1
+          }
+        },
+        {
+          "label": "陽光曬暖的木質與安靜書房",
+          "note": "沉靜、溫潤，帶一點柔和辛香",
+          "score": {
+            "woody": 4,
+            "amber": 1
+          }
+        },
+        {
+          "label": "烘焙香料與溫暖樹脂",
+          "note": "圓潤、微辛香、慢慢展開",
+          "score": {
+            "amber": 4,
+            "woody": 1
+          }
+        }
+      ]
+    },
+    {
+      "stage": "02｜氣味轉折",
+      "title": "你希望香氣從開始到最後，怎麼變化？",
+      "help": "這會影響前段、中段與尾段的配置。",
+      "options": [
+        {
+          "label": "明亮開場，最後乾淨淡去",
+          "note": "開場有光感，尾韻不厚重",
+          "score": {
+            "citrus": 4,
+            "woody": 1
+          }
+        },
+        {
+          "label": "先含蓄，花香慢慢被聞見",
+          "note": "層次逐步出現，不一開始就很甜",
+          "score": {
+            "floral": 4,
+            "woody": 1
+          }
+        },
+        {
+          "label": "先鮮綠，最後留下淡木質",
+          "note": "像葉片逐漸乾燥後的變化",
+          "score": {
+            "green": 4,
+            "woody": 1
+          }
+        },
+        {
+          "label": "從清新微辛，慢慢走向沉靜木香",
+          "note": "氣息由明亮轉為溫潤，尾韻安定",
+          "score": {
+            "woody": 4,
+            "green": 1
+          }
+        },
+        {
+          "label": "開始柔和，尾韻越來越溫暖",
+          "note": "喜歡停留後的圓潤與包覆感",
+          "score": {
+            "amber": 4,
+            "floral": 1
+          }
+        }
+      ]
+    },
+    {
+      "stage": "03｜甜度",
+      "title": "你可以接受多少甜味？",
+      "help": "甜度會直接影響花香、果香與樹脂調的表現。",
+      "options": [
+        {
+          "label": "幾乎不要甜",
+          "note": "偏乾燥、清楚、俐落",
+          "score": {
+            "woody": 1,
+            "green": 1
+          },
+          "trait": {
+            "key": "sweetness",
+            "value": "低甜度"
+          }
+        },
+        {
+          "label": "只要一點圓潤感",
+          "note": "能柔化氣味，但不成為主角",
+          "score": {
+            "floral": 1,
+            "citrus": 1
+          },
+          "trait": {
+            "key": "sweetness",
+            "value": "微甜"
+          }
+        },
+        {
+          "label": "可以明顯溫暖柔甜",
+          "note": "接受較飽滿的花香或樹脂感",
+          "score": {
+            "amber": 2,
+            "floral": 1
+          },
+          "trait": {
+            "key": "sweetness",
+            "value": "柔甜"
+          }
+        }
+      ]
+    },
+    {
+      "stage": "04｜溫度感",
+      "title": "你想讓這份香氣呈現什麼溫度？",
+      "help": "不是季節測驗，而是確認氣味在鼻腔裡的冷暖印象。",
+      "options": [
+        {
+          "label": "偏冷、清透",
+          "note": "像空氣、果皮或薄霧",
+          "score": {
+            "citrus": 1,
+            "green": 1
+          },
+          "trait": {
+            "key": "temperature",
+            "value": "清冷"
+          }
+        },
+        {
+          "label": "中性、自然",
+          "note": "不刻意冷，也不明顯溫熱",
+          "score": {
+            "woody": 1,
+            "floral": 1
+          },
+          "trait": {
+            "key": "temperature",
+            "value": "中性"
+          }
+        },
+        {
+          "label": "偏暖、圓潤",
+          "note": "像木頭、辛香或夕陽的暖度",
+          "score": {
+            "amber": 2,
+            "woody": 1
+          },
+          "trait": {
+            "key": "temperature",
+            "value": "溫暖"
+          }
+        }
+      ]
+    },
+    {
+      "stage": "05｜氣味質地",
+      "title": "如果香氣也有觸感，你偏好哪一種？",
+      "help": "不同質地會讓香氣呈現透明、柔滑或保有清楚的材料感。",
+      "options": [
+        {
+          "label": "透明，有空氣感",
+          "note": "氣味之間保留空間，不厚重",
+          "score": {
+            "citrus": 2
+          },
+          "trait": {
+            "key": "texture",
+            "value": "透明"
+          }
+        },
+        {
+          "label": "柔滑，像細緻布料",
+          "note": "層次融合，邊緣不尖銳",
+          "score": {
+            "floral": 2,
+            "amber": 1
+          },
+          "trait": {
+            "key": "texture",
+            "value": "柔滑"
+          }
+        },
+        {
+          "label": "乾爽，層次清晰",
+          "note": "木香、葉片與辛香各自可辨，卻自然融合",
+          "score": {
+            "woody": 2,
+            "green": 1
+          },
+          "trait": {
+            "key": "texture",
+            "value": "乾燥"
+          }
+        }
+      ]
+    },
+    {
+      "stage": "06｜香氣距離",
+      "title": "你希望別人在多近的距離才聞得到？",
+      "help": "這不是越濃越好，而是確認你舒服的擴散範圍。",
+      "options": [
+        {
+          "label": "只有自己靠近時聞得到",
+          "note": "像一個貼近自己的氣味記號",
+          "trait": {
+            "key": "intensity",
+            "value": "輕柔・近距離"
+          }
+        },
+        {
+          "label": "坐在身旁的人隱約聞到",
+          "note": "有存在感，但不主動進入別人的空間",
+          "trait": {
+            "key": "intensity",
+            "value": "適中・一臂距離"
+          }
+        },
+        {
+          "label": "走近時就能感覺到",
+          "note": "希望它成為清楚的個人氣味印象",
+          "trait": {
+            "key": "intensity",
+            "value": "明顯・近身擴散"
+          }
+        }
+      ]
+    },
+    {
+      "stage": "07｜停留時間",
+      "title": "你希望這份香氣大約陪伴多久？",
+      "help": "實際停留會受素材與環境影響，這題先確認你的期待。",
+      "options": [
+        {
+          "label": "短暫出現即可",
+          "note": "約一段短時間，適合重新補聞",
+          "trait": {
+            "key": "duration",
+            "value": "短暫、可重複補聞"
+          }
+        },
+        {
+          "label": "陪伴半天左右",
+          "note": "需要前、中、後段都有清楚轉折",
+          "trait": {
+            "key": "duration",
+            "value": "中等停留"
+          }
+        },
+        {
+          "label": "希望尾韻停留更久",
+          "note": "會提高木質或樹脂尾段的比重",
+          "score": {
+            "woody": 1,
+            "amber": 1
+          },
+          "trait": {
+            "key": "duration",
+            "value": "較長尾韻"
+          }
+        }
+      ]
+    },
+    {
+      "stage": "08｜使用情境",
+      "title": "你最可能在哪一個時刻使用它？",
+      "help": "同一種香氣放在工作桌、個人穿戴或空間裡，設計方式會不同。",
+      "options": [
+        {
+          "label": "出門前的個人氣味",
+          "note": "需要容易辨識、靠近自己也舒服",
+          "trait": {
+            "key": "occasion",
+            "value": "個人日常"
+          }
+        },
+        {
+          "label": "閱讀或獨處時",
+          "note": "希望安靜、不搶走注意力",
+          "score": {
+            "woody": 1,
+            "floral": 1
+          },
+          "trait": {
+            "key": "occasion",
+            "value": "閱讀與獨處"
+          }
+        },
+        {
+          "label": "工作桌或創作空間",
+          "note": "偏好清楚、不甜膩的輪廓",
+          "score": {
+            "green": 1,
+            "citrus": 1
+          },
+          "trait": {
+            "key": "occasion",
+            "value": "工作與創作"
+          }
+        },
+        {
+          "label": "與重要的人相聚時",
+          "note": "希望有記憶點，也保有適當距離",
+          "score": {
+            "floral": 1,
+            "amber": 1
+          },
+          "trait": {
+            "key": "occasion",
+            "value": "相聚時刻"
+          }
+        }
+      ]
+    },
+    {
+      "stage": "09｜排除條件",
+      "title": "以下哪一種感受，最不希望出現在試香裡？",
+      "help": "先知道不能出現什麼，能減少收到後不喜歡的可能。",
+      "options": [
+        {
+          "label": "太甜，像糖果",
+          "note": "排除明顯甜膩感",
+          "avoid": "明顯甜味"
+        },
+        {
+          "label": "太尖銳，像清潔用品",
+          "note": "排除過度銳利的清新感",
+          "avoid": "尖銳清新感"
+        },
+        {
+          "label": "太粉，像濃厚化妝香",
+          "note": "排除明顯粉感",
+          "avoid": "濃厚粉感"
+        },
+        {
+          "label": "太厚重，停留太久",
+          "note": "排除濃厚與包覆感",
+          "avoid": "厚重尾韻"
+        },
+        {
+          "label": "太綠，像揉碎藥草",
+          "note": "排除強烈草本氣息",
+          "avoid": "強烈草本"
+        }
+      ]
+    },
+    {
+      "stage": "10｜尾韻確認",
+      "title": "二十分鐘後，你最想在試香紙上留下什麼？",
+      "help": "尾韻最接近真正會留下的印象，因此這題會加重判定。",
+      "options": [
+        {
+          "label": "乾淨透明，像光穿過空氣",
+          "note": "不黏膩，保持清楚",
+          "score": {
+            "citrus": 5
+          }
+        },
+        {
+          "label": "細緻花香，近聞才有層次",
+          "note": "柔和但不單薄",
+          "score": {
+            "floral": 5
+          }
+        },
+        {
+          "label": "鮮綠草本，輪廓俐落",
+          "note": "帶自然葉片感",
+          "score": {
+            "green": 5
+          }
+        },
+        {
+          "label": "沉靜木香，溫潤而安定",
+          "note": "柔和、不張揚，留下細緻餘韻",
+          "score": {
+            "woody": 5
+          }
+        },
+        {
+          "label": "溫暖樹脂，圓潤地停留",
+          "note": "尾韻較深、有包覆感",
+          "score": {
+            "amber": 5
+          }
+        }
+      ]
+    },
+    {
+      "stage": "11｜最初印象",
+      "title": "香氣剛出現時，哪一個畫面最讓你想靠近？",
+      "help": "不用認識精油，只要選擇鼻子最喜歡的第一印象。",
+      "options": [
+        {
+          "label": "剛剝開、帶一點微苦的柑橘皮",
+          "note": "清亮、有精神，但不是甜果汁",
+          "score": {
+            "citrus": 2,
+            "floral": 1
+          },
+          "trait": {
+            "key": "topDirection",
+            "value": "T01"
+          }
+        },
+        {
+          "label": "成熟橙子散出的圓潤果香",
+          "note": "親切、溫暖，帶自然甜感",
+          "score": {
+            "citrus": 2,
+            "amber": 1
+          },
+          "trait": {
+            "key": "topDirection",
+            "value": "T02"
+          }
+        },
+        {
+          "label": "切開檸檬時飛出的清爽香氣",
+          "note": "明快、俐落，像乾淨的光線",
+          "score": {
+            "citrus": 2,
+            "green": 1
+          },
+          "trait": {
+            "key": "topDirection",
+            "value": "T03"
+          }
+        },
+        {
+          "label": "手指揉開柑橘樹葉的青綠氣息",
+          "note": "有葉片、微苦與淡淡木質感",
+          "score": {
+            "green": 2,
+            "woody": 1
+          },
+          "trait": {
+            "key": "topDirection",
+            "value": "T04"
+          }
+        },
+        {
+          "label": "曬乾花草後留下的乾淨清香",
+          "note": "柔和、不甜，帶自然草本輪廓",
+          "score": {
+            "floral": 2,
+            "green": 1
+          },
+          "trait": {
+            "key": "topDirection",
+            "value": "T05"
+          }
+        }
+      ]
+    },
+    {
+      "stage": "12｜香氣中心",
+      "title": "香氣慢慢展開後，你希望停留在哪一種氛圍？",
+      "help": "想像聞了幾分鐘之後，你最希望繼續感受到的畫面。",
+      "options": [
+        {
+          "label": "風吹過乾淨花草田的清香",
+          "note": "柔和花草與淡淡綠意，很自然",
+          "score": {
+            "floral": 2,
+            "green": 1
+          },
+          "trait": {
+            "key": "heartDirection",
+            "value": "H01"
+          }
+        },
+        {
+          "label": "帶著綠葉感的細緻玫瑰花香",
+          "note": "有花朵層次，但不厚重粉甜",
+          "score": {
+            "floral": 3
+          },
+          "trait": {
+            "key": "heartDirection",
+            "value": "H02"
+          }
+        },
+        {
+          "label": "白色花瓣靠近乾淨木頭的氣息",
+          "note": "花木柔和、清潔，不甜膩",
+          "score": {
+            "floral": 2,
+            "woody": 1
+          },
+          "trait": {
+            "key": "heartDirection",
+            "value": "H03"
+          }
+        },
+        {
+          "label": "午後溫暖香草園的氣息",
+          "note": "草本中帶一點柔甜與深度",
+          "score": {
+            "green": 2,
+            "amber": 1
+          },
+          "trait": {
+            "key": "heartDirection",
+            "value": "H04"
+          }
+        },
+        {
+          "label": "安靜空間裡淡淡的透明樹脂香",
+          "note": "微辛香、清透，慢慢連向木質",
+          "score": {
+            "woody": 2,
+            "amber": 1
+          },
+          "trait": {
+            "key": "heartDirection",
+            "value": "H05"
+          }
+        }
+      ]
+    },
+    {
+      "stage": "13｜留下的尾韻",
+      "title": "二十分鐘後，你最希望試香紙留下哪種感覺？",
+      "help": "選擇你願意一再靠近聞的尾韻，不需要判斷它是哪一種材料。",
+      "options": [
+        {
+          "label": "安靜書房裡溫潤而乾淨的木香",
+          "note": "沉穩、細緻，讓人自然放慢呼吸",
+          "score": {
+            "woody": 3
+          },
+          "trait": {
+            "key": "baseDirection",
+            "value": "B01"
+          }
+        },
+        {
+          "label": "空氣中若有似無的淡樹脂香",
+          "note": "透明、微辛，留有呼吸空間",
+          "score": {
+            "woody": 2,
+            "amber": 1
+          },
+          "trait": {
+            "key": "baseDirection",
+            "value": "B02"
+          }
+        },
+        {
+          "label": "雨後土地與乾燥落葉",
+          "note": "深色、微濕潤，材料感明顯",
+          "score": {
+            "woody": 2,
+            "green": 1
+          },
+          "trait": {
+            "key": "baseDirection",
+            "value": "B03"
+          }
+        },
+        {
+          "label": "溫暖樹脂包住淡淡甜香",
+          "note": "圓潤、柔暖，讓氣味邊緣更柔和",
+          "score": {
+            "amber": 3
+          },
+          "trait": {
+            "key": "baseDirection",
+            "value": "B04"
+          }
+        },
+        {
+          "label": "夜色森林裡溫暖而深沉的木香",
+          "note": "帶一點泥土與輕柔煙燻，餘韻悠長",
+          "score": {
+            "woody": 3
+          },
+          "trait": {
+            "key": "baseDirection",
+            "value": "B05"
+          }
+        }
+      ]
+    },
+    {
+      "stage": "14｜最後定調",
+      "title": "如果只能再加上一個細節，你希望它往哪裡走？",
+      "help": "這是最後的氣味微調，請選擇你希望收到的最終氣質。",
+      "options": [
+        {
+          "label": "更明亮透明",
+          "note": "增加空氣感，讓香氣顯得輕盈清楚",
+          "score": {
+            "citrus": 2
+          },
+          "trait": {
+            "key": "finish",
+            "value": "明亮透明"
+          }
+        },
+        {
+          "label": "更柔和花香",
+          "note": "把花木邊緣變得柔順、細緻",
+          "score": {
+            "floral": 2
+          },
+          "trait": {
+            "key": "finish",
+            "value": "柔和花香"
+          }
+        },
+        {
+          "label": "更鮮綠俐落",
+          "note": "補上葉片微苦感與清楚輪廓",
+          "score": {
+            "green": 2
+          },
+          "trait": {
+            "key": "finish",
+            "value": "鮮綠俐落"
+          }
+        },
+        {
+          "label": "更沉靜木香",
+          "note": "讓木香更溫潤，尾韻安定而悠長",
+          "score": {
+            "woody": 2
+          },
+          "trait": {
+            "key": "finish",
+            "value": "乾燥木質"
+          }
+        },
+        {
+          "label": "更溫暖圓潤",
+          "note": "柔化氣味邊緣，留下溫暖包覆感",
+          "score": {
+            "amber": 2
+          },
+          "trait": {
+            "key": "finish",
+            "value": "溫暖圓潤"
+          }
+        }
+      ]
+    }
+  ]
+}
