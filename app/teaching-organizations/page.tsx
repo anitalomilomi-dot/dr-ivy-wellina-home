@@ -90,7 +90,7 @@ export default function TeachingOrganizationsPage() {
 
         <section className="organization-contact">
           <div><p className="section-kicker soft">INVITE DR. IVY</p><h2><span className="title-line">依您的對象與場域，</span><span className="title-line">共同規劃合適的芳香內容。</span></h2></div>
-          <div className="collaboration-contact-actions"><a className="button button-cream" href="/brand-collaborations/">品牌合作案例 →</a><a className="button button-cream" href="https://tr.ee/HpdgvcwyGW" target="_blank" rel="noreferrer">邀請授課 ↗</a></div>
+          <div className="collaboration-contact-actions"><a className="button button-cream" href="/psychology-scent-partners/">香氣探索據點 →</a><a className="button button-cream" href="/brand-collaborations/">品牌合作案例 →</a><a className="button button-cream" href="https://tr.ee/HpdgvcwyGW" target="_blank" rel="noreferrer">邀請授課 ↗</a></div>
         </section>
       </main>
       <ContentFooter />

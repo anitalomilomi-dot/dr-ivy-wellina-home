@@ -2,7 +2,7 @@ import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 import test from "node:test";
 
-const blockedPublicClaims = /治療|治癒|療癒|處方|療程|醫療團隊研發|改善健康|世界第一|全球最佳|五國\s*16\s*項|2,?000\s*位個案/;
+const blockedPublicClaims = /治療(?!所)|治癒|療癒|處方|療程|醫療團隊研發|改善健康|世界第一|全球最佳|五國\s*16\s*項|2,?000\s*位個案/;
 
 test("scent results translate internal distance and duration labels into natural public language", async () => {
   const source = await readFile(new URL("../app/new-architecture-preview/ScentQuizPreview.tsx", import.meta.url), "utf8");
@@ -99,6 +99,20 @@ test("presents teaching organizations in clear professional groups", async () =>
   assert.match(html, /3,000 場次/);
   assert.doesNotMatch(html, blockedPublicClaims);
   assert.doesNotMatch(html, /提升健康|保證成效|醫療效果/);
+});
+
+test("presents psychology partners and scent exploration locations", async () => {
+  const response = await render("/psychology-scent-partners");
+  assert.equal(response.status, 200);
+  const html = await response.text();
+  for (const name of [
+    "心日上心理諮商所", "寬欣心理治療所", "芯寬欣心理治療所", "欣明心理成長中心", "慈恩心理治療所",
+    "繪星心理治療所", "禾好心理治療所", "牧陽心理治療所", "啟初心理治療所",
+  ]) assert.match(html, new RegExp(name));
+  for (const city of ["台北", "台南", "嘉義", "高雄", "屏東"]) assert.match(html, new RegExp(city));
+  assert.match(html, /心理專業合作與香氣探索據點/);
+  assert.doesNotMatch(html, blockedPublicClaims);
+  assert.doesNotMatch(html, /診斷|保證|改善心理|心理效果/);
 });
 
 test("presents the nine-member cross-disciplinary lecturer team", async () => {

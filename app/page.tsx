@@ -310,7 +310,7 @@ export default function Home() {
         <div className="collaboration-partners" aria-label="Dr. IVY 品牌合作足跡">
           <div><small>SELECTED COLLABORATIONS</small><h3>品牌與場域合作足跡</h3></div>
           <p>涵碧樓 VIP 調香・艾恩斯遊艇・澄市設計・富廣建設・金豐集團・水灣餐廳・遊樂園・酒店・民宿</p>
-          <div className="collaboration-partner-links"><a href="/brand-collaborations/">查看品牌合作 →</a><a href="/teaching-organizations/">查看授課單位 →</a></div>
+          <div className="collaboration-partner-links"><a href="/brand-collaborations/">查看品牌合作 →</a><a href="/teaching-organizations/">查看授課單位 →</a><a href="/psychology-scent-partners/">心理專業合作與香氣探索據點 →</a></div>
         </div>
       </section>
 

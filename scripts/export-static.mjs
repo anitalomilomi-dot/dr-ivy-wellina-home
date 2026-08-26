@@ -26,6 +26,7 @@ const contentSlugs = [
   "wellina-products",
   "brand-collaborations",
   "teaching-organizations",
+  "psychology-scent-partners",
   "team",
 ];
 

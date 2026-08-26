@@ -4,7 +4,7 @@ import test from "node:test";
 import { fileURLToPath } from "node:url";
 
 const projectRoot = fileURLToPath(new URL("..", import.meta.url));
-const blockedPublicClaims = /治療|治癒|療癒|處方|療程|醫療團隊研發|改善健康|世界第一|全球最佳|五國\s*16\s*項|2,?000\s*位個案/;
+const blockedPublicClaims = /治療(?!所)|治癒|療癒|處方|療程|醫療團隊研發|改善健康|世界第一|全球最佳|五國\s*16\s*項|2,?000\s*位個案/;
 
 test("exports a host-neutral GitHub Pages homepage", async () => {
   const html = await readFile(`${projectRoot}/docs/index.html`, "utf8");
@@ -24,6 +24,7 @@ test("exports a host-neutral GitHub Pages homepage", async () => {
   await access(`${projectRoot}/docs/images/lab-table.jpg`);
   await access(`${projectRoot}/docs/images/wellina-ig-ivy.jpg`);
   await access(`${projectRoot}/docs/team/index.html`);
+  await access(`${projectRoot}/docs/psychology-scent-partners/index.html`);
   await access(`${projectRoot}/docs/images/team/hsin-ju-tang.jpg`);
   await access(`${projectRoot}/docs/images/team/liu-nai-rong.jpg`);
   await access(`${projectRoot}/docs/images/team/chen-hsiao-wen.jpg`);
