@@ -25,12 +25,27 @@ test("exports a host-neutral GitHub Pages homepage", async () => {
   await access(`${projectRoot}/docs/images/wellina-ig-ivy.jpg`);
   await access(`${projectRoot}/docs/team/index.html`);
   await access(`${projectRoot}/docs/psychology-scent-partners/index.html`);
+  await access(`${projectRoot}/docs/scent-quiz/index.html`);
+  await access(`${projectRoot}/docs/scent-quiz.js`);
   await access(`${projectRoot}/docs/images/team/hsin-ju-tang.jpg`);
   await access(`${projectRoot}/docs/images/team/liu-nai-rong.jpg`);
   await access(`${projectRoot}/docs/images/team/chen-hsiao-wen.jpg`);
   await access(`${projectRoot}/docs/images/team/wang-yu-ching.jpg`);
   await access(`${projectRoot}/docs/images/team/yang-hsin-jou.jpg`);
   await assert.rejects(access(`${projectRoot}/docs/images/team/shu-ting-hsu.jpg`));
+});
+
+test("exports the interactive scent quiz without internal formula data", async () => {
+  const html = await readFile(`${projectRoot}/docs/scent-quiz/index.html`, "utf8");
+  const script = await readFile(`${projectRoot}/docs/scent-quiz.js`, "utf8");
+
+  assert.match(html, /十四個氣味面向[\s\S]*找到最接近你的[\s\S]*專屬香氣輪廓/);
+  assert.match(html, /id="scent-quiz-interactive-root"/);
+  assert.match(html, /src="\.\.\/scent-quiz\.js\?v=[a-f0-9]{10}"/);
+  assert.match(script, /測驗進度/);
+  assert.match(script, /十五種香調之一|靜謐木香調/);
+  assert.doesNotMatch(`${html}\n${script}`, /S09-A|芳樟醇|乙酸沉香酯|formulaId|materialId/);
+  assert.doesNotMatch(html, blockedPublicClaims);
 });
 
 test("exports the course navigator, six search entrances and five oil notes", async () => {

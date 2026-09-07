@@ -38,7 +38,7 @@ test("server-renders the Dr. IVY homepage", async () => {
   assert.match(html, /合作服務/);
   assert.match(html, /28 年/);
   assert.match(html, /3,000 場次/);
-  assert.match(html, /十四個氣味面向/);
+  assert.match(html, /十四個氣味面向[\s\S]*找到最接近你的[\s\S]*專屬香氣輪廓/);
   assert.match(html, /15種香調結果/);
   assert.match(html, /國際芳療師認證/);
   assert.match(html, /國際調香師認證/);

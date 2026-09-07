@@ -23,7 +23,7 @@ export default function ScentQuizPage() {
       <section className="scent-journey-hero">
         <div>
           <p className="section-kicker">DISCOVER YOUR SCENT</p>
-          <h1><span className="title-line">從十四個氣味面向，</span><span className="title-line">找到最接近你的</span><em className="title-line">專屬香氣輪廓。</em></h1>
+          <h1><span className="title-line">十四個氣味面向，</span><span className="title-line">找到最接近你的</span><em className="title-line">專屬香氣輪廓。</em></h1>
           <p>不需要認識精油或調香原料，只要依照直覺選擇喜歡的氣味畫面。完成後，你會得到十五種香調之一、專屬文字、收藏圖卡與香氣編號。</p>
           <a className="button button-deep" href="#scent-quiz">開始測驗 ↓</a>
         </div>
@@ -35,7 +35,9 @@ export default function ScentQuizPage() {
           <div><p className="section-kicker">YOUR SCENT PORTRAIT</p><h2 id="scent-quiz-title">用你的感受，<br />描繪香氣輪廓。</h2></div>
           <p>測驗從最初印象、香氣轉折、甜度、冷暖、質地、距離與尾韻逐步展開；每次只呈現一個最接近的結果。</p>
         </div>
-        <ScentQuizPreview />
+        <div id="scent-quiz-interactive-root">
+          <ScentQuizPreview />
+        </div>
       </section>
 
       <section className="scent-delivery-preview" id="scent-delivery" aria-labelledby="delivery-title">

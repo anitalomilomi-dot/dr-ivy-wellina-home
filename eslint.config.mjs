@@ -13,6 +13,7 @@ const eslintConfig = defineConfig([
     "dist/**",
     "out/**",
     "build/**",
+    "docs/scent-quiz.js",
     "next-env.d.ts",
   ]),
   eslint.configs.recommended,
