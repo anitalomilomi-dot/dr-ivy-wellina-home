@@ -146,13 +146,22 @@ test("server-renders the dedicated 14-question scent journey", async () => {
   assert.match(html, /測驗進度 1 \/ 14/);
   assert.match(html, /十四個氣味面向/);
   assert.match(html, /十五種香調之一/);
-  assert.match(html, /5ml專屬香氣/);
-  assert.match(html, /專屬香氣寄送資料/);
-  assert.match(html, /收件人/);
-  assert.match(html, /收件電話/);
-  assert.match(html, /收件地址/);
+  assert.match(html, /專屬試香尚未開放訂購、付款與寄送/);
+  assert.match(html, /本次結果不會自動傳送給 Dr. IVY/);
+  assert.doesNotMatch(html, /<form|送出寄送申請|customerName|recipientPhone/);
   assert.doesNotMatch(html, /S09-A|芳樟醇|乙酸沉香酯/);
   assert.doesNotMatch(html, blockedPublicClaims);
+});
+
+test("keeps classroom cards separate from the scent quiz", async () => {
+  const response = await render("/");
+  assert.equal(response.status, 200);
+  const html = await response.text();
+  assert.match(html, /href="\/aroma-card\/"/);
+  assert.match(html, /製作我的香氛卡/);
+  const scentSection = html.match(/<section class="home-scent-feature"[\s\S]*?<\/section>/)?.[0];
+  assert.ok(scentSection);
+  assert.doesNotMatch(scentSection, /製作我的香氛卡|classroom-aroma/);
 });
 
 test("keeps one international certification page ready for verified information", async () => {
@@ -208,4 +217,18 @@ test("each essential-oil page shows a verified botanical image and journal sourc
     assert.match(html, new RegExp(`pubmed\\.ncbi\\.nlm\\.nih\\.gov/${pmid}`));
     assert.doesNotMatch(html, blockedPublicClaims);
   }
+});
+
+
+test("renders independent classroom scan and production areas", async () => {
+  const response = await render("/aroma-card");
+  assert.equal(response.status, 200);
+  const html = await response.text();
+  assert.match(html, /classroom-aroma-card-qr.png/);
+  assert.match(html, /id="classroom-scan"/);
+  assert.match(html, /id="classroom-studio"/);
+  assert.match(html, /href="https:\/\/ivy-aroma-card-9x2k4m\.pages\.dev\/"/);
+  assert.match(html, /進入我的香氛卡製作工具/);
+  assert.match(html, /每支精油的滴數/);
+  assert.doesNotMatch(html, /十五種香調之一|送出寄送申請/);
 });

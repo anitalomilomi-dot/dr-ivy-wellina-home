@@ -11,6 +11,8 @@ test("exports a host-neutral GitHub Pages homepage", async () => {
   const css = await readFile(`${projectRoot}/docs/style.css`, "utf8");
 
   assert.match(html, /讓香氣成為一門/);
+  assert.match(html, /href="\.\/aroma-card\/"/);
+  assert.match(html, /製作我的香氛卡/);
   assert.match(html, /href="\.\/style\.css\?v=[a-f0-9]{10}"/);
   assert.match(html, /src="\.\/images\/wellina-ig-ivy\.jpg"/);
   assert.doesNotMatch(html, /\/_next\/|<script\b/i);
@@ -45,6 +47,7 @@ test("exports the interactive scent quiz without internal formula data", async (
   assert.match(script, /測驗進度/);
   assert.match(script, /十五種香調之一|靜謐木香調/);
   assert.doesNotMatch(`${html}\n${script}`, /S09-A|芳樟醇|乙酸沉香酯|formulaId|materialId/);
+  assert.doesNotMatch(`${html}\n${script}`, /__SCENT_ORDER_ENDPOINT__|送出寄送申請/);
   assert.doesNotMatch(html, blockedPublicClaims);
 });
 
@@ -95,4 +98,22 @@ test("keeps six content types as independent templates", async () => {
   assert.match(templates, /StudentStoryPageTemplate/);
   assert.match(templates, /ActivityMediaPageTemplate/);
   assert.match(templates, /TeacherAlumniPageTemplate/);
+});
+
+
+test("exports independent classroom page, QR and visible home navigation on every page", async () => {
+  const { readdir } = await import("node:fs/promises");
+  const docs = `${projectRoot}/docs`;
+  const pages = ["index.html"];
+  for (const entry of await readdir(docs, { withFileTypes: true })) {
+    if (entry.isDirectory() && !["images", "presentations"].includes(entry.name)) pages.push(`${entry.name}/index.html`);
+  }
+  assert.equal(pages.length, 21);
+  for (const page of pages) {
+    const html = await readFile(`${docs}/${page}`, "utf8");
+    assert.match(html, /class="home-return"[^>]*>← 回到首頁/, page);
+  }
+  const html = await readFile(`${docs}/aroma-card/index.html`, "utf8");
+  assert.match(html, /我的香氛卡製作區/);
+  await access(`${docs}/images/classroom-aroma-card-qr.png`);
 });

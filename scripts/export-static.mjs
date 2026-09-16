@@ -29,6 +29,7 @@ const contentSlugs = [
   "teaching-organizations",
   "psychology-scent-partners",
   "scent-quiz",
+  "aroma-card",
   "team",
 ];
 

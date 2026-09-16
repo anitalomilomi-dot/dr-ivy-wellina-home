@@ -52,6 +52,7 @@ const socialPosts = [
 export default function Home() {
   return (
     <main>
+      <a className="home-return" href="#top">← 回到首頁</a>
       <header className="site-header">
         <a className="wordmark" href="#top" aria-label="Dr. IVY 首頁">
           <span>Dr. IVY</span>
@@ -63,6 +64,7 @@ export default function Home() {
           <a href="/team/">講師團隊</a>
           <a href="#courses">課程學習</a>
           <a href="/scent-quiz/">香氣測驗</a>
+          <a href="/aroma-card/">課堂香氛卡</a>
           <a href="#media">影音花絮</a>
           <a href="#knowledge">知識資源</a>
           <a href="/international-certifications/">國際認證</a>
@@ -81,6 +83,7 @@ export default function Home() {
             <a href="/team/">講師團隊</a>
             <a href="#courses">課程學習</a>
             <a href="/scent-quiz/">香氣測驗</a>
+          <a href="/aroma-card/">課堂香氛卡</a>
             <a href="#media">影音花絮</a>
             <a href="#knowledge">知識資源</a>
             <a href="/international-certifications/">國際認證</a>
@@ -166,7 +169,9 @@ export default function Home() {
           <h2 id="home-scent-title"><span className="title-line">十四個氣味面向，</span><span className="title-line">找到最接近你的</span><span className="title-line">專屬香氣輪廓。</span></h2>
           <p>依照直覺選擇喜歡的氣味畫面，完成後取得十五種香調之一、專屬文字、收藏圖卡與香氣編號。你不需要先認識精油，也能自然開始探索。</p>
           <div className="home-scent-points"><span>14個氣味面向</span><span>15種香調結果</span><span>專屬收藏圖卡</span></div>
-          <a className="button button-deep" href="/scent-quiz/">開始香氣測驗 ↗</a>
+          <div className="hero-actions">
+            <a className="button button-deep" href="/scent-quiz/">開始香氣測驗 ↗</a>
+          </div>
         </div>
         <figure className="home-scent-card"><img src="/images/scent-cards/wellina-master-scent-card-v1.png" alt="Dr. IVY × WELLINA 專屬香氣圖卡" /><figcaption><small>Dr. IVY × WELLINA</small><strong>YOUR SCENT PORTRAIT</strong><span>一份值得收藏的香氣記憶</span></figcaption></figure>
       </section>
@@ -198,6 +203,16 @@ export default function Home() {
           <a href="/team/"><span>04</span><small>TRAIN THE TRAINER</small><h3>講師培訓與教學發展</h3><i>→</i></a>
           <a href="#online"><span>05</span><small>ONLINE LEARNING</small><h3>線上課程專區</h3><i>→</i></a>
         </div>
+      </section>
+
+      <section className="classroom-card-feature" id="classroom-aroma-card" aria-labelledby="classroom-card-title">
+        <div>
+          <p className="section-kicker">DR. IVY CLASSROOM · AROMA NOTES</p>
+          <h2 id="classroom-card-title"><span className="title-line">把今天的聞香筆記，</span><span className="title-line">收藏成我的香氛卡。</span></h2>
+          <p>給正在上課的學員：掃描 QR Code，記下當天聞到的精油、喜好與感受，填入每支精油的滴數，留下自己的配方，再製作一張課堂香氛紀念卡。</p>
+          <div className="hero-actions"><a className="button button-deep" href="/aroma-card/">製作我的香氛卡 ↗</a><a className="text-link" href="/aroma-card/#classroom-scan">學生掃描入口 →</a></div>
+        </div>
+        <figure className="classroom-qr"><a href="/aroma-card/" aria-label="進入課堂香氛卡專頁"><img src="/images/classroom-aroma-card-qr.png" alt="學生掃描後進入我的香氛卡，記錄課堂聞香與配方" /></a><figcaption><strong>課堂專用 · 學生掃描</strong><span>聞香筆記・精油滴數・我的配方</span></figcaption></figure>
       </section>
 
       <section className="media-section" id="media" aria-labelledby="media-title">
@@ -248,13 +263,13 @@ export default function Home() {
         <div className="knowledge-intro">
           <p className="section-kicker soft">KNOWLEDGE AFTER CLASS</p>
           <h2 id="knowledge-title"><span className="title-line">下課之後，</span><span className="title-line">學習繼續發生。</span></h2>
-          <p>課程簡報、延伸閱讀、配方筆記、研究導讀與常見問答，會依主題整理，方便課前閱讀、課後複習與繼續探索。</p>
+          <p>從學習導航、調香入門到精油知識與研究來源，依主題閱讀，方便課前準備、課後複習與繼續探索。</p>
         </div>
         <div className="knowledge-grid">
-          <a href="#slides"><span>01</span><small>CLASS NOTES</small><h3>課程簡報<br />與延伸閱讀</h3><p>像簡報一樣好讀的網頁文章，課前可看、課後可查。</p><i>→</i></a>
-          <a href="#formula"><span>02</span><small>FORMULA NOTES</small><h3>配方筆記<br />與安全提醒</h3><p>整理配方脈絡、使用方法與需要留意的安全資訊。</p><i>→</i></a>
-          <a href="#research"><span>03</span><small>RESEARCH DIGEST</small><h3>研究導讀<br />與來源連結</h3><p>把有參考價值的研究整理成容易理解的閱讀入口。</p><i>→</i></a>
-          <a href="#stories"><span>04</span><small>STUDENT STORIES</small><h3>學員心得<br />與實作分享</h3><p>經同意與審核後，讓學習經驗成為彼此的靈感。</p><i>→</i></a>
+          <a href="/course-guide/"><span>01</span><small>LEARNING GUIDE</small><h3>學習導航<br />與延伸閱讀</h3><p>依照學習目標整理方向，找到適合自己的閱讀起點。</p><i>→</i></a>
+          <a href="/essential-oil-perfume/"><span>02</span><small>SCENT CREATION</small><h3>調香入門<br />與實作紀錄</h3><p>從嗅聞與氣味描述開始，學習整理自己的調香筆記。</p><i>→</i></a>
+          <a href="/lavender-essential-oil/"><span>03</span><small>RESEARCH DIGEST</small><h3>研究導讀<br />與來源連結</h3><p>把有參考價值的研究整理成容易理解的閱讀入口。</p><i>→</i></a>
+          <a href="/brand-collaborations/"><span>04</span><small>COLLABORATION STORIES</small><h3>合作案例<br />與活動紀錄</h3><p>從品牌與場域案例，看見芳香教育如何走進不同情境。</p><i>→</i></a>
         </div>
         <div className="knowledge-extension">
           <div className="knowledge-extension-heading">
@@ -282,11 +297,11 @@ export default function Home() {
         <div className="people-copy">
           <p className="section-kicker">PEOPLE &amp; COMMUNITY</p>
           <h2 id="people-title"><span className="title-line">讓專業夥伴，</span><span className="title-line">在同一個平台</span><span className="title-line">被看見。</span></h2>
-          <p>認識 Dr. IVY 培育的講師團隊、具跨域專業背景的校友，以及學員在課程中累積的學習與創作故事。</p>
+          <p>認識 Dr. IVY、專業顧問與九位講師，從各自的背景與教學方向，看見芳香教育的跨域連結。</p>
           <div className="people-links">
             <a href="/team/"><small>01 · INSTRUCTORS</small><strong>講師團隊</strong><span>→</span></a>
-            <a href="#alumni"><small>02 · ALUMNI</small><strong>專業校友</strong><span>→</span></a>
-            <a href="#stories"><small>03 · STORIES</small><strong>學員分享</strong><span>→</span></a>
+            <a href="/team/#team-advisors-title"><small>02 · ADVISORS</small><strong>專業顧問</strong><span>→</span></a>
+            <a href="/brand-collaborations/"><small>03 · COLLABORATIONS</small><strong>合作足跡</strong><span>→</span></a>
           </div>
         </div>
       </section>
@@ -330,7 +345,7 @@ export default function Home() {
           <h2 id="shop-title"><span className="title-line">讓學習與日常，</span><span className="title-line">在同一個地方延續。</span></h2>
           <div className="shop-options">
             <article className="shop-primary"><small>WELLINA BRAND &amp; PRODUCTS</small><h3>品牌與產品專頁</h3><p>品牌故事、產品影像與相關介紹集中在獨立頁面，主官網維持 Dr. IVY 的專業教育主軸。</p><div className="shop-links"><a href="/wellina-products/">進入 WELLINA 專頁 →</a></div></article>
-            <article><small>ONLINE ACADEMY</small><h3>線上課程</h3><p>在官網內觀看課程、閱讀教材，讓不同地區的學員也能延續每一階段的學習。</p><a href="https://tr.ee/HpdgvcwyGW" target="_blank" rel="noreferrer">詢問線上課程 ↗</a></article>
+            <article><small>ONLINE ACADEMY</small><h3>線上課程</h3><p>想了解線上學習的內容與參與方式，歡迎聯絡詢問當期課程安排。</p><a href="https://tr.ee/HpdgvcwyGW" target="_blank" rel="noreferrer">詢問線上課程 ↗</a></article>
           </div>
         </div>
       </section>

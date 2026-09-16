@@ -1705,3 +1705,30 @@ main small,
   .certification-pathway-grid article { min-height: auto; }
   .certification-next-step { align-items: flex-start; flex-direction: column; }
 }
+
+/* Classroom notes have an independent entry, QR, and production area. */
+.home-return { position: fixed; right: 20px; bottom: 22px; z-index: 80; padding: 13px 20px; background: var(--paper); color: var(--deep); border: 1px solid var(--sage); font-size: 17px; line-height: 1.4; box-shadow: 0 3px 16px rgba(40,63,52,.12); }
+.home-return:focus-visible { outline: 3px solid var(--sage); outline-offset: 3px; }
+.classroom-card-feature { display: grid; grid-template-columns: minmax(0,1.5fr) minmax(240px,.6fr); align-items: center; gap: clamp(36px,6vw,100px); padding: 100px clamp(24px,7vw,120px); background: var(--mist-light); }
+.classroom-card-feature h1, .classroom-card-feature h2 { margin: 14px 0 24px; color: var(--deep); font-family: var(--serif); font-weight: 400; font-size: clamp(34px,3.9vw,58px); line-height: 1.45; }
+.classroom-card-feature p, .classroom-card-studio > p { max-width: 780px; font-size: 19px; line-height: 1.9; }
+.classroom-qr { margin: 0; text-align: center; scroll-margin-top: 120px; }
+.classroom-qr img { width: min(100%,280px); aspect-ratio: 1; padding: 12px; background: white; object-fit: contain; }
+.classroom-qr figcaption { display: grid; gap: 12px; margin-top: 18px; color: var(--deep); font-size: 17px; line-height: 1.6; }
+.classroom-qr figcaption span { color: var(--muted); }
+.classroom-qr figcaption a { text-decoration: underline; text-underline-offset: 5px; }
+.classroom-card-steps { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 36px; padding: 70px clamp(24px,7vw,120px); }
+.classroom-card-steps article { border-top: 1px solid var(--line); padding-top: 26px; }
+.classroom-card-steps article > span { color: var(--sage); font: 26px Georgia,serif; }
+.classroom-card-steps h2 { font: 400 28px/1.5 var(--serif); color: var(--deep); }
+.classroom-card-steps p { font-size: 18px; line-height: 1.9; }
+.classroom-card-studio { padding: 70px clamp(24px,7vw,120px) 100px; scroll-margin-top: 100px; }
+.classroom-card-studio h2 { color: var(--deep); font: 400 clamp(32px,4vw,50px)/1.45 var(--serif); }
+.classroom-card-studio iframe { display: block; width: 100%; height: 1100px; margin-top: 30px; border: 1px solid var(--line); background: var(--paper); }
+.classroom-note { color: var(--muted); font-size: 16px !important; line-height: 1.8; }
+@media (min-width: 981px) and (max-width: 1350px) { .desktop-nav { gap: 13px; font-size: 13px; } }
+@media (max-width: 680px) { .home-return { right: 12px; bottom: 14px; padding: 11px 16px; font-size: 16px; } .classroom-card-feature { grid-template-columns: minmax(0,1fr); padding: 60px 24px; gap: 40px; } .classroom-card-steps { grid-template-columns: 1fr; padding: 48px 24px; gap: 28px; } .classroom-card-studio { padding: 48px 16px 70px; } .classroom-card-studio iframe { height: 900px; } }
+
+.classroom-launch { margin: 32px 0; padding: clamp(28px,5vw,60px); border: 1px solid var(--line); background: var(--mist-light); }
+.classroom-launch h3 { color: var(--deep); font: 400 30px/1.5 var(--serif); }
+.classroom-launch p { font-size: 19px; line-height: 1.9; }
