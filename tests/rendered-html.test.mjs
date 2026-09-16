@@ -41,8 +41,9 @@ test("server-renders the Dr. IVY homepage", async () => {
   assert.match(html, /十四個氣味面向[\s\S]*找到最接近你的[\s\S]*專屬香氣輪廓/);
   assert.match(html, /15種香調結果/);
   assert.match(html, /國際芳療師認證/);
-  assert.match(html, /國際調香師認證/);
-  assert.match(html, /法國・英國・美國・加拿大・澳洲/);
+  assert.match(html, /調香學習與培訓/);
+  assert.match(html, /法國・英國・美國・加拿大/);
+  assert.doesNotMatch(html, /澳洲/);
   assert.match(html, /Dr\. IVY[\s\S]*形象影片/);
   assert.match(html, /youtube\.com\/watch\?v=zB0yH0vCjmE/);
   assert.match(html, /wellina-official-film\.jpg/);
@@ -164,16 +165,19 @@ test("keeps classroom cards separate from the scent quiz", async () => {
   assert.doesNotMatch(scentSection, /製作我的香氛卡|classroom-aroma/);
 });
 
-test("keeps one international certification page ready for verified information", async () => {
+test("shows the supplied Taipei and Kaohsiung enrollment posters directly on the aromatherapy course page", async () => {
   const response = await render("/international-certifications");
   assert.equal(response.status, 200);
   const html = await response.text();
   assert.match(html, /國際芳療師認證/);
-  assert.match(html, /國際調香師認證/);
-  assert.match(html, /認證單位與官方來源/);
-  assert.match(html, /課程與學習內容/);
-  assert.match(html, /評量與申請流程/);
-  assert.match(html, /證書與資格關係/);
+  assert.match(html, /69期台北班/);
+  assert.match(html, /高雄班/);
+  assert.match(html, /src="\/images\/taipei-69-certification-edm\.jpg"/);
+  assert.match(html, /src="\/images\/kaohsiung-certification-edm\.png"/);
+  assert.match(html, /2026年12月12日（六）/);
+  assert.doesNotMatch(html, /澳洲|從學習目標出發/);
+  assert.match(html, /href="\/brochures\/taipei-69-certification-2026\.pdf"[^>]*download/);
+  assert.doesNotMatch(html, /certification-pathways|certification-information|評量與申請流程|證書與資格關係/);
   assert.doesNotMatch(html, /可授課、可考評、可發證|VSBAM|NAHA|CFA|AFai/);
   assert.doesNotMatch(html, blockedPublicClaims);
 });

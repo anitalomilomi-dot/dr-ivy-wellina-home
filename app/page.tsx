@@ -153,7 +153,7 @@ export default function Home() {
           <p>網站將 Dr. IVY 的課程、調香教學、活動紀錄、專業文章與合作經驗整理在一起，讓課堂之外仍能方便閱讀、查找與延伸。</p>
           <div className="brand-links">
             <a href="#courses">探索課程 <span>↓</span></a>
-            <a href="/international-certifications/">國際學習路徑 <span>↗</span></a>
+            <a href="/international-certifications/">國際認證課程 <span>↗</span></a>
           </div>
         </div>
         <div className="brand-collage">
@@ -179,7 +179,7 @@ export default function Home() {
       <section className="course-section" id="courses" aria-labelledby="courses-title">
         <div className="section-title split-title">
           <div><p className="section-kicker">COURSES &amp; LEARNING</p><h2 id="courses-title"><span className="title-line">從喜歡香氣，</span><span className="title-line">走到理解香氣。</span></h2></div>
-          <p>依照現在的學習目標，從主題體驗、專業進修、講師培訓到國際學習路徑，找到適合自己的起點。</p>
+          <p>依照現在的學習目標，從主題體驗、專業進修、講師培訓到國際認證課程，找到適合自己的起點。</p>
         </div>
 
         <div className="course-guide-callout">
@@ -199,7 +199,7 @@ export default function Home() {
 
         <div className="course-rows">
           <a href="https://dr-wellina.com/class/" target="_blank" rel="noreferrer"><span>02</span><small>PROFESSIONAL</small><h3>專業進修與實務應用</h3><i>↗</i></a>
-          <a href="/international-certifications/"><span>03</span><small>CERTIFICATION</small><h3>國際認證學習路徑</h3><i>→</i></a>
+          <a href="/international-certifications/"><span>03</span><small>CERTIFICATION</small><h3>國際認證課程</h3><i>→</i></a>
           <a href="/team/"><span>04</span><small>TRAIN THE TRAINER</small><h3>講師培訓與教學發展</h3><i>→</i></a>
           <a href="#online"><span>05</span><small>ONLINE LEARNING</small><h3>線上課程專區</h3><i>→</i></a>
         </div>
@@ -330,11 +330,11 @@ export default function Home() {
       </section>
 
       <section className="international-section" id="international" aria-labelledby="international-title">
-        <div className="international-heading"><p className="section-kicker">INTERNATIONAL LEARNING</p><h2 id="international-title"><span className="title-line">國際學習與認證，</span><span className="title-line">在一個區塊清楚理解。</span></h2><p>依學習目標認識芳香與調香的國際進修方向；各期課程、評量、申請及證書資訊，將依正式課程公告說明。</p></div>
+        <div className="international-heading"><p className="section-kicker">INTERNATIONAL LEARNING</p><h2 id="international-title"><span className="title-line">國際認證與專業培訓，</span><span className="title-line">直接查看課程資訊。</span></h2><p>找到想學習的課程，直接查看招生簡章、上課時間與報名方式。</p></div>
         <div className="international-paths">
-          <a href="/international-certifications/"><span>01</span><small>AROMATHERAPY PATHWAY</small><h3>國際芳療師認證</h3><p>從基礎學習、專業進修到申請條件，理解不同階段的學習安排。</p><i>查看完整資訊 →</i></a>
-          <a href="/international-certifications/"><span>02</span><small>PERFUMERY PATHWAY</small><h3>國際調香師認證</h3><p>從嗅覺訓練、香調結構到調香實作，認識專業培訓的學習方向。</p><i>查看完整資訊 →</i></a>
-          <div className="international-countries"><small>INTERNATIONAL CONNECTIONS</small><p>法國・英國・美國・加拿大・澳洲</p></div>
+          <a href="/international-certifications/"><span>01</span><small>AROMATHERAPY COURSES</small><h3>國際芳療師認證</h3><p>2026雙認證課程：69期台北班、高雄班。招生 EDM、日期與地點一次看清楚。</p><i>查看課程資訊 →</i></a>
+          <a href="/become-perfumer/"><span>02</span><small>PERFUMERY LEARNING</small><h3>調香學習與培訓</h3><p>認識嗅覺訓練、香調與調香實作，了解調香師的學習內容。</p><i>查看調香學習資訊 →</i></a>
+          <div className="international-countries"><small>INTERNATIONAL CONNECTIONS</small><p>法國・英國・美國・加拿大</p></div>
         </div>
       </section>
 

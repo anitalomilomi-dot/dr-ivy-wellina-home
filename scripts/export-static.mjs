@@ -53,6 +53,9 @@ await mkdir(outputDir, { recursive: true });
 await cp(path.join(projectRoot, "public/images"), path.join(outputDir, "images"), {
   recursive: true,
 });
+await cp(path.join(projectRoot, "public/brochures"), path.join(outputDir, "brochures"), {
+  recursive: true,
+});
 await cp(
   path.join(projectRoot, "public/presentations"),
   path.join(outputDir, "presentations"),

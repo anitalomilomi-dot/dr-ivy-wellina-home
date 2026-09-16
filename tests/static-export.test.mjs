@@ -106,7 +106,7 @@ test("exports independent classroom page, QR and visible home navigation on ever
   const docs = `${projectRoot}/docs`;
   const pages = ["index.html"];
   for (const entry of await readdir(docs, { withFileTypes: true })) {
-    if (entry.isDirectory() && !["images", "presentations"].includes(entry.name)) pages.push(`${entry.name}/index.html`);
+    if (entry.isDirectory() && !["images", "presentations", "brochures"].includes(entry.name)) pages.push(`${entry.name}/index.html`);
   }
   assert.equal(pages.length, 21);
   for (const page of pages) {
@@ -116,4 +116,12 @@ test("exports independent classroom page, QR and visible home navigation on ever
   const html = await readFile(`${docs}/aroma-card/index.html`, "utf8");
   assert.match(html, /我的香氛卡製作區/);
   await access(`${docs}/images/classroom-aroma-card-qr.png`);
+});
+
+test("enrollment posters and downloadable brochure are included in the portable course page", async () => {
+  const html = await readFile(`${projectRoot}/docs/international-certifications/index.html`, "utf8");
+  assert.match(html, /src="\.\.\/images\/taipei-69-certification-edm\.jpg"/);
+  assert.match(html, /src="\.\.\/images\/kaohsiung-certification-edm\.png"/);
+  assert.match(html, /href="\.\.\/brochures\/taipei-69-certification-2026\.pdf"/);
+  for (const file of ["images/taipei-69-certification-edm.jpg", "images/kaohsiung-certification-edm.png", "brochures/taipei-69-certification-2026.pdf"]) await access(`${projectRoot}/docs/${file}`);
 });

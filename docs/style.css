@@ -1530,7 +1530,7 @@ main small,
 /* International certification detail page keeps one page ready for future verified content. */
 .certifications-page { background: var(--paper); }
 .certifications-page .content-header { position: sticky; color: var(--deep); background: rgba(248,246,239,.95); }
-.certifications-hero { min-height: 700px; padding: clamp(100px, 10vw, 160px) clamp(24px, 9vw, 170px); display: flex; align-items: center; background: linear-gradient(135deg, #e8ece4, #f8f6ef 62%, #e2dccd); }
+.certifications-hero { padding: 64px clamp(24px, 8vw, 150px); display: flex; align-items: center; background: linear-gradient(135deg, #e8ece4, #f8f6ef 62%, #e2dccd); }
 .certifications-hero > div { max-width: 1020px; }
 .certifications-hero h1 { margin: 0; color: var(--deep); font: 400 clamp(46px, 5vw, 74px)/1.43 var(--serif); letter-spacing: .025em; }
 .certifications-hero h1 em { color: var(--sage); }
@@ -1544,6 +1544,42 @@ main small,
 .certification-section-heading { max-width: 900px; margin-bottom: 56px; }
 .certification-section-heading h2 { margin: 0; color: var(--deep); font: 400 clamp(40px, 4vw, 60px)/1.48 var(--serif); }
 .certification-section-heading > p:last-child { margin: 24px 0 0; color: inherit; font-size: 18px; line-height: 1.9; }
+.enrollment-quick-links { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+.enrollment-quick-links > a { padding: 24px 28px; border: 1px solid var(--line); background: var(--paper); color: var(--deep); }
+.enrollment-quick-links > a:hover { border-color: var(--deep); }
+.enrollment-quick-links small { display: block; color: var(--sage); font-size: 15px; }
+.enrollment-quick-links strong { display: block; margin: 12px 0; font: 400 28px/1.5 var(--serif); }
+.enrollment-quick-links p { margin: 0 0 16px; font-size: 16px; line-height: 1.7; }
+.enrollment-quick-links span { font-size: 16px; }
+.certification-enrollment { padding: 72px clamp(24px, 8vw, 150px); scroll-margin-top: 100px; }
+.certification-enrollment-kaohsiung { background: var(--mist-light); }
+.certification-enrollment .certification-section-heading { margin-bottom: 36px; }
+.certification-enrollment .certification-section-heading h2 { font-size: clamp(32px, 3.5vw, 48px); }
+.certification-enrollment-grid { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: clamp(28px, 5vw, 64px); align-items: start; }
+.certification-edm { min-width: 0; margin: 0; }
+.certification-edm a { display: block; border: 1px solid var(--line); }
+.certification-edm img { display: block; width: 100%; height: auto; }
+.certification-edm figcaption { margin-top: 14px; color: var(--muted); font-size: 15px; line-height: 1.8; }
+.certification-enrollment-details { min-width: 0; }
+.certification-enrollment-details article { padding: 0 0 24px; margin-bottom: 24px; border-bottom: 1px solid var(--line); }
+.certification-enrollment-details h3 { margin: 0 0 16px; color: var(--deep); font: 400 25px/1.5 var(--serif); }
+.certification-enrollment-details p, .certification-enrollment-details dd { margin: 0; color: var(--deep); font-size: 17px; line-height: 1.9; }
+.certification-enrollment-details dl { margin: 0; }
+.certification-enrollment-details dl > div + div { margin-top: 20px; }
+.certification-enrollment-details dt { margin-bottom: 6px; color: var(--muted); font-size: 15px; }
+.certification-enrollment-details p.enrollment-small { margin-top: 14px; font-size: 15px; }
+.enrollment-actions { display: grid; gap: 22px; justify-items: start; }
+.enrollment-actions .button { max-width: 100%; white-space: normal; line-height: 1.7; }
+.certification-contact > div > p:last-child { margin-top: 24px; line-height: 1.8; }
+@media (max-width: 900px) {
+  .certification-enrollment-grid { grid-template-columns: 1fr; }
+  .certification-edm { max-width: 620px; }
+}
+@media (max-width: 600px) {
+  .enrollment-quick-links { grid-template-columns: 1fr; gap: 14px; }
+  .enrollment-quick-links > a { padding: 20px; }
+  .certification-enrollment { padding: 52px 20px; }
+}
 .certification-pathway-grid { display: grid; grid-template-columns: 1fr 1fr; border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
 .certification-pathway-grid article { min-height: 440px; padding: clamp(30px, 4vw, 52px); border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); }
 .certification-pathway-grid article > span { float: right; color: var(--clay); font: 20px Georgia, serif; }
@@ -1700,7 +1736,7 @@ main small,
   .certification-pathways,
   .certification-information,
   .certification-next-step { padding: 82px 20px; }
-  .certifications-hero { min-height: 650px; }
+  .certifications-hero { padding: 40px 20px; }
   .certifications-hero h1 { font-size: 39px; }
   .certification-pathway-grid article { min-height: auto; }
   .certification-next-step { align-items: flex-start; flex-direction: column; }
