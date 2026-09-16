@@ -344,7 +344,7 @@ export default function Home() {
           <p className="section-kicker">SHOP &amp; ONLINE LEARNING</p>
           <h2 id="shop-title"><span className="title-line">讓學習與日常，</span><span className="title-line">在同一個地方延續。</span></h2>
           <div className="shop-options">
-            <article className="shop-primary"><small>WELLINA BRAND &amp; PRODUCTS</small><h3>品牌與產品專頁</h3><p>品牌故事、產品影像與相關介紹集中在獨立頁面，主官網維持 Dr. IVY 的專業教育主軸。</p><div className="shop-links"><a href="/wellina-products/">進入 WELLINA 專頁 →</a></div></article>
+            <article className="shop-primary"><small>WELLINA BRAND &amp; PRODUCTS</small><h3>品牌與產品專頁</h3><p>認識 WELLINA 的品牌故事與香氣產品，從喜歡的氣味開始，探索香氣與日常生活的連結。</p><div className="shop-links"><a href="/wellina-products/">進入 WELLINA 專頁 →</a></div></article>
             <article><small>ONLINE ACADEMY</small><h3>線上課程</h3><p>想了解線上學習的內容與參與方式，歡迎聯絡詢問當期課程安排。</p><a href="https://tr.ee/HpdgvcwyGW" target="_blank" rel="noreferrer">詢問線上課程 ↗</a></article>
           </div>
         </div>
